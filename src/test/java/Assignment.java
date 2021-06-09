@@ -45,9 +45,9 @@ public class Assignment {
         Alert x = driver.switchTo().alert();
         Thread.sleep(2000);
 
-        driver.findElement(By.xpath("//div[@class = 'ui-dialog-titlebar-buttonpane']/button")).click();
-    }catch (NoSuchElementException e )
-    {
+//        driver.findElement(By.xpath("//div[@class = 'ui-dialog-titlebar-buttonpane']/button")).click();
+//    }catch (NoSuchElementException e )
+//    {
 
     }
     }
