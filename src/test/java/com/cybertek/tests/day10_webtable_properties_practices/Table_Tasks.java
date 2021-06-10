@@ -1,6 +1,7 @@
 package com.cybertek.tests.day10_webtable_properties_practices;
 
 import com.cybertek.utilities.ConfigurationReader;
+import com.cybertek.utilities.TableUtils;
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -41,5 +42,11 @@ public class Table_Tasks {
 
 
 
+    }
+
+    @Test
+    public void task4_verify_order_method(){
+
+        TableUtils.verifyOrder(driver,"Tim");
     }
 }
