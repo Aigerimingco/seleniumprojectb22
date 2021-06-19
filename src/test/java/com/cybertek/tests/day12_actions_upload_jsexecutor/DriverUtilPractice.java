@@ -26,9 +26,7 @@ public class DriverUtilPractice {
 
         Driver.closeDriver();
 
-        Thread.sleep(2000);
-
-        Driver.getDriver().get("https://etsy.com/");
+        Driver.getDriver().get("https://etsy.com");
 
         Driver.closeDriver();
 
