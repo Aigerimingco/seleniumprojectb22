@@ -3,6 +3,7 @@ package com.cybertek.tests.day12_actions_upload_jsexecutor;
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -46,6 +47,33 @@ public class ActionPractices {
         // 7.Confirm: a.“name: user3” is displayed
         Assert.assertTrue(user3.isDisplayed());
 
+
+    }
+
+    @Test
+    public void scrolling_test(){
+        Driver.getDriver().get("http://practice.cybertekschool.com");
+
+        //scroll down to"Powered By Cybertek School
+        Actions actions= new Actions(Driver.getDriver());
+
+        //Locate "Powered By Cybertek School"
+        WebElement cybertekSchoolLink= Driver.getDriver().findElement(By.linkText("Cybertek School"));
+
+        // Scroll using actions object
+        BrowserUtils.sleep(2);
+        actions.moveToElement(cybertekSchoolLink).perform();
+
+
+        //Scrolling up using .Keys.Page_UP button
+       BrowserUtils.sleep(2);
+       actions.sendKeys(Keys.PAGE_UP,Keys.PAGE_UP).perform();
+
+      //  BrowserUtils.sleep(2);
+      // actions.sendKeys(Keys.PAGE_UP).perform();
+
+        BrowserUtils.sleep(2);
+       actions.sendKeys(Keys.PAGE_DOWN).perform();
 
     }
 }
